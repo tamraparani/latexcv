@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%	
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -29,15 +29,19 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and dont use a cv template
-\documentclass[10pt,A4]{article}	
+\documentclass[10pt,A4]{article}
 
+%----------------------------------------------------------------------------------------
+%	Hyper Link for Linkedin etc
+%----------------------------------------------------------------------------------------
 
+\usepackage{hyperref}
 %----------------------------------------------------------------------------------------
 %	ENCODING
 %----------------------------------------------------------------------------------------
 
 %we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	LOGIC
@@ -59,14 +63,14 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+%\usepackage[thin]{roboto}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
 
 %----------------------------------------------------------------------------------------
@@ -74,21 +78,21 @@
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}			
+%\usepackage{showframe}
 
 
 %define page styles using geometry
-\usepackage[a4paper]{geometry}		
+\usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
 
 %use customized header
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 
 %less space between header and content
-\setlength{\headheight}{-5pt}		
+\setlength{\headheight}{-5pt}
 
 
 %customize entries left, center and right
@@ -102,10 +106,10 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for layouting tables
-\usepackage{multicol}			
+\usepackage{multicol}
 \usepackage{multirow}
 
 %extended aligning of tabular cells
@@ -117,7 +121,7 @@
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for header image
 \usepackage{graphicx}
@@ -125,17 +129,17 @@
 %for floating figures
 \usepackage{wrapfig}
 \usepackage{float}
-%\floatstyle{boxed} 
+%\floatstyle{boxed}
 %\restylefloat{figure}
 
-%for drawing graphics		
-\usepackage{tikz}				
+%for drawing graphics
+\usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 \usepackage{color}
 
@@ -162,23 +166,23 @@
 %----------------------------------------------------------------------------------------
 
 % remove top header line
-\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
 
 %remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
+\renewcommand{\footrulewidth}{0pt}
 
 %remove pagenum
-\renewcommand{\thepage}{}	
+\renewcommand{\thepage}{}
 
-%remove section num		
-\renewcommand{\thesection}{}			
+%remove section num
+\renewcommand{\thesection}{}
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % include the left arrow into a tikz picture
 % param1: fill color
@@ -231,7 +235,7 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by some paragraphs about 
+% creates a stretched box as cv entry headline followed by some paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
@@ -252,11 +256,11 @@
 	\foreach \desc in {#4}{
 		$\cdot$ \desc\\[3pt]
 	}
-	
+
 \vspace{3pt}
 }
 
-% creates a stretched box as 
+% creates a stretched box as
 \newcommand{\cveventmeta}[2]
 {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
@@ -289,7 +293,7 @@
 
 
 %use our custom fancy header definitions
-\pagestyle{fancy}	
+\pagestyle{fancy}
 
 
 
@@ -311,23 +315,16 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{Jan Küster} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
-	\small Consultant and Software Developer
+	\HUGE \textsc{Deepa Tamraparani} \textcolor{sectcol}\\
+	\small {\textbf{ \href{https://www.linkedin.com/in/deepa-tamraparani}{LinkedIn Profile} Tamraparani.D@gmail.com}}\\
+  \small {\textbf{ +49 176 470 724 14 Berlin, Germany}}
 \end{center}
 
 
 
 \vspace{6pt}
 
-
-%---------------------------------------------------------------------------------------
-%	META SECTION
-%----------------------------------------------------------------------------------------
-\metasection{Bremen, Germany}{\textbf{Status:} M.Sc. Digital Media, Scientific Employee}
-\metasection{www.jankuester.com}{\textbf{Fields:} Software Engineering, Consulting, Scrum, Usability} 
-\metasection{info@jankuester.com}{\textbf{Techs:} Meteor, Javascript, Mongo,. Bootstrap, Bash, Git, Webstorm}
-\metasection{+49 176 *** *** **}{\textbf{Activities:} Global Game Jam, Open Source, Fitness}
-\vspace{-2pt}
+\vspace{-4pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
 
@@ -338,99 +335,92 @@
 %----------------------------------------------------------------------------------------
 \vspace{-6pt}
 \cvsection{Summary}
-Digital media graduate with project experience in the field of technology based assessment. Currently working as IT Consultant at We4IT, Bremen in the field of IBM Notes Domino and XPages applications. Master studies focused on teams from different disciplines and cultural backgrounds on solutions for complex problems.\\
-
+Passionate Individual with 8 years of professional experience as IT Consultant at Sapiens in the field of Insurance and Java JEE applications. Le Wagon Data Science graduate with project experience in the field of Start up evaluation.Master studies in Business administration focused on Entrepreneurship and Innovation\\
 
 %============================================================================%
 %
 %	CV SECTIONS AND EVENTS (MAIN CONTENT)
 %
 %============================================================================%
-
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 \cvsection{Experience}
-
-\cvevent{2016 - present}{Scientific Employee / PhD Student}{University of Bremen}{
-	{Develop and evaluate the next generation learning management system with Meteor},
-	{Define a new level of software for classroom management based on an extensive nursing curriculum.}
+\cvevent{2023/07 - present}{Data Science Student}{Le Wagon Coding School}{
+	{Learned Data Science with Python; Data Analytics with SQL, BigQuery, Pandas, Numpy, and Matplotlib},
+	{Machine Learning with Scikit-learn; Deep Learning with TensorFlow Keras},
+  {Statistics with Scipy, Seaborn and Statsmodels}
 }
 
 %
-\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{
-	{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports},
-	{Implement the frontend for a BPMN compatible engine within We4IT Aveedo}
+\cvevent{2020 - 2023/08}{Technical Team Lead for Backend Engineering team}{Sapiens Germany GmbH Berlin}{
+	{Supervised Agile software development lifecycle, Hands on Coding and Code Reviews},
+	{Creation of intricate infrastructure that supports critical insurance processes}
 }
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{
-	{Invented a flexible assessment framework, targeting industrial trainees},
-	{Supervised software development lifecycle, Recruited team members}
+\cvevent{2018 - 2020}{Technical Consultant / Software Development}{Sapiens Singapore}{
+	{Designing Algorithms and using JEE to develop high Quality Insurance Software in intense Agile development framework},
+	{Feature Engineering to enable modeling of risk assessment and optimising Claim Loss},
+  {Integration of Google Analytics and Report Generation for the Marketing department},
+  {Demonstrated leadership skills by successfully managing diverse international teams}
 }
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{
-	{Performed a two-day project simulation from management perspective},
-	{Topics included customer contracts, change management, controlling, operational tasks}
+\cvevent{2014 - 2020}{Software Developer}{Sapiens India}{
+	{Received Product Development Training in Israel},
+  {Implementation of Solution prototypes for Prospective Customers},
+	{Hands On Coding and Timed deliverables in fast paced project implementation in single handed and large teams}
 }
-
-%\textcolor{softcol}{\hrule}
-
 
 %
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{
-	{Realized an online diagnosis platform for workforce literacy development (Flex)},
-	{Modeled software design, implemented various prototypes, conducted usability tests}
+\cvevent{2012 - 2014}{Software Developer}{NTT DATA First Apex India}{
+	{Responsible for building core product modules including Document Generation System, Workflow System}
 }
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\cvsection{Skills}
 
+\cvevent{}{Technical Skills}{}{
+	{Data Science with Python; Data Analytics with SQL, BigQuery, Pandas, Numpy, and Matplotlib},
+	{Machine Learning with Scikit-learn; Deep Learning with TensorFlow Keras},
+  {Statistics with Scipy, Seaborn and Statsmodels},
+  {Java JEE, python, Web services, SQL Server, gcloud, Docker, Git},
+  {Machine learning, MLOps, Software Engineering, Scrum, Insurance}
+}
+%\textcolor{softcol}{\hrule}
+%
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{
-	{Master Thesis: Semi Automated Scoring in Technology Based Assessment},
-	{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+\cvevent{2008 - 2012}{Graduated as Bachelors in Computer Science}{BMS Institute of Technology(VTU), Bangalore}{
+	{Learn, develop and evaluate an algorithms}
 }
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{
-	{Co-Invented a touch table application for medical support, co-developed software (Java)},
-	{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
+\cvevent{2020 - present}{Master in Business Administration}{WHU - Otto Beisheim School of Management}{
+	{Exploring various facets of Business centered around Artificial Intelligence}
 }
 
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{
-	{Inter-cultural classes in English, covering special topics in computer science and design},
-	{Professionalized in research methods, software development and e-assessment}
-}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{
-	{Mastered six months of study and trans-cultural experience in Melbourne, Australia},
-	{Finished machine programming, information visualization, professional essay writing}
-}
 
 
 %--------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
 %--------------------------------------------------------------------------------------------------
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{www.jankuester.com} $\cdot$ \textcolor{sectcol}{github.com/jankapunkt}}}}
+\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{www.linkedin.com/in/deepa-tamraparani} $\cdot$ \textcolor{sectcol}{github.com/tamraparani}}}}
 
 
 
