@@ -51,6 +51,15 @@
 \usepackage{xifthen}
 
 %----------------------------------------------------------------------------------------
+%	graphicx package for photo
+%----------------------------------------------------------------------------------------
+
+
+% Include the graphicx package
+\usepackage{graphicx}
+\usepackage{shapepar} % Add the shapepar package for circle shape of the photo
+
+%----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 
@@ -315,12 +324,19 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{Deepa Tamraparani} \textcolor{sectcol}\\
-	\small {\textbf{ \href{https://www.linkedin.com/in/deepa-tamraparani}{LinkedIn Profile} Tamraparani.D@gmail.com}}\\
-  \small {\textbf{ +49 176 470 724 14 Berlin, Germany}}
+  \begin{minipage}[t]{0.7\textwidth} % Adjust the width as needed
+    \vspace{0pt} % Add some vertical space at the top
+    \textcolor{sectcol}{\HUGE \textsc{Deepa Tamraparani}}\\
+    \small {\textbf{ \href{https://www.linkedin.com/in/deepa-tamraparani}{LinkedIn Profile} Tamraparani.D@gmail.com}}\\
+    \small {\textbf{ +49 176 470 724 14 Berlin, Germany}}
+    \vspace{1em} % Add some vertical space between the text and the photo
+  \end{minipage}%
+  \hfill % This adds horizontal space between the minipages, pushing the second one to the right
+  \begin{minipage}[t]{0.3\textwidth} % Adjust the width as needed
+    \raggedleft % Align the photo to the right
+    \raisebox{-\height}{\includegraphics[width=2.5cm]{Deepa.jpeg}} % Replace with the actual filename of your photo
+  \end{minipage}
 \end{center}
-
-
 
 \vspace{6pt}
 
@@ -335,7 +351,7 @@
 %----------------------------------------------------------------------------------------
 \vspace{-6pt}
 \cvsection{Summary}
-Passionate Individual with 8 years of professional experience as IT Consultant at Sapiens in the field of Insurance and Java JEE applications. Le Wagon Data Science graduate with project experience in the field of Start up evaluation.Master studies in Business administration focused on Entrepreneurship and Innovation\\
+Passionate Individual with 8 years of professional experience as IT Consultant at Sapiens in the field of Insurance and Java JEE applications. Le Wagon Data Science graduate with project experience in the field of Start up evaluation. WHU Masters in Business administration focused on Entrepreneurship and Innovation\\
 
 %============================================================================%
 %
@@ -346,14 +362,14 @@ Passionate Individual with 8 years of professional experience as IT Consultant a
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 \cvsection{Experience}
-\cvevent{2023/07 - present}{Data Science Student}{Le Wagon Coding School}{
+\cvevent{2023|07 - present}{Data Science Student}{\textit{Le Wagon Coding School}}{
 	{Learned Data Science with Python; Data Analytics with SQL, BigQuery, Pandas, Numpy, and Matplotlib},
 	{Machine Learning with Scikit-learn; Deep Learning with TensorFlow Keras},
   {Statistics with Scipy, Seaborn and Statsmodels}
 }
 
 %
-\cvevent{2020 - 2023/08}{Technical Team Lead for Backend Engineering team}{Sapiens Germany GmbH Berlin}{
+\cvevent{2020 - 2023|08}{Technical Team Lead for Backend Engineering team}{\textit{Sapiens Germany GmbH Berlin}}{
 	{Supervised Agile software development lifecycle, Hands on Coding and Code Reviews},
 	{Creation of intricate infrastructure that supports critical insurance processes}
 }
@@ -361,7 +377,7 @@ Passionate Individual with 8 years of professional experience as IT Consultant a
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2018 - 2020}{Technical Consultant / Software Development}{Sapiens Singapore}{
+\cvevent{2018 - 2020}{Technical Consultant / Software Development}{\textit{Sapiens Singapore}}{
 	{Designing Algorithms and using JEE to develop high Quality Insurance Software in intense Agile development framework},
 	{Feature Engineering to enable modeling of risk assessment and optimising Claim Loss},
   {Integration of Google Analytics and Report Generation for the Marketing department},
@@ -371,14 +387,14 @@ Passionate Individual with 8 years of professional experience as IT Consultant a
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2014 - 2020}{Software Developer}{Sapiens India}{
+\cvevent{2014 - 2020}{Software Developer}{\textit{Sapiens India}}{
 	{Received Product Development Training in Israel},
   {Implementation of Solution prototypes for Prospective Customers},
 	{Hands On Coding and Timed deliverables in fast paced project implementation in single handed and large teams}
 }
 
 %
-\cvevent{2012 - 2014}{Software Developer}{NTT DATA First Apex India}{
+\cvevent{2012 - 2014}{Software Developer}{\textit{NTT DATA First Apex India}}{
 	{Responsible for building core product modules including Document Generation System, Workflow System}
 }
 %---------------------------------------------------------------------------------------
@@ -401,14 +417,14 @@ Passionate Individual with 8 years of professional experience as IT Consultant a
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-\cvevent{2008 - 2012}{Graduated as Bachelors in Computer Science}{BMS Institute of Technology(VTU), Bangalore}{
+\cvevent{2008 - 2012}{Graduated as Bachelors in Computer Science}{\textit{BMS Institute of Technology(VTU)}}{
 	{Learn, develop and evaluate an algorithms}
 }
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2020 - present}{Master in Business Administration}{WHU - Otto Beisheim School of Management}{
+\cvevent{2020 - present}{Master in Business Administration}{\textit{WHU - Otto Beisheim School of Management}}{
 	{Exploring various facets of Business centered around Artificial Intelligence}
 }
 
@@ -420,7 +436,7 @@ Passionate Individual with 8 years of professional experience as IT Consultant a
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{www.linkedin.com/in/deepa-tamraparani} $\cdot$ \textcolor{sectcol}{github.com/tamraparani}}}}
+\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{\href{https://www.linkedin.com/in/deepa-tamraparani}{LinkedIn Profile}} $\cdot$ \textcolor{sectcol}{github.com/tamraparani}}}}
 
 
 
